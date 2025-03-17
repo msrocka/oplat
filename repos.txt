@@ -1,0 +1,13 @@
+# The repository URLs that should be checked for updated components.
+
+# Eclipse Orbit
+https://download.eclipse.org/tools/orbit/downloads/drops/I20230403150144/repository
+
+# Eclipse Platform
+https://download.eclipse.org/eclipse/updates/4.35/R-4.35-202502280140
+
+# Eclipse EMF
+https://download.eclipse.org/modeling/emf/emf/builds/release/2.41.0
+
+# Eclipse GEF
+https://download.eclipse.org/tools/gef/classic/release/3.23.0
