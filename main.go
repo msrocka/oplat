@@ -25,19 +25,9 @@ func main() {
 			fmt.Println("Could not fetch or parse repo:", url, err)
 			continue
 		}
-		fmt.Println(repo.Name)
-		break
+		fmt.Printf("<repository location=\"%s\" />\n", url)
+		syncRepo(repo, targetDef)
 	}
-
-	for _, loc := range targetDef.Locations {
-		fmt.Println(loc.Type)
-		fmt.Println(loc.Repo.URL)
-		for _, unit := range loc.Units {
-			fmt.Println(unit.ID)
-			fmt.Println(unit.Version)
-		}
-	}
-
 }
 
 func readTargetDefinition() *TargetDef {
@@ -60,4 +50,17 @@ func readTargetDefinition() *TargetDef {
 		os.Exit(1)
 	}
 	return targetDef
+}
+
+func syncRepo(repo *Repo, targetDef *TargetDef) {
+	for _, unit := range repo.Units {
+		id := unit.ID
+		for _, loc := range targetDef.Locations {
+			for _, targetUnit := range loc.Units {
+				if targetUnit.ID == id && targetUnit.Version != unit.Version {
+					fmt.Printf("  <unit id=\"%s\" version=\"%s\"/>\n\n", id, unit.Version)
+				}
+			}
+		}
+	}
 }
