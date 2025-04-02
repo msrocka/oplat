@@ -3,6 +3,9 @@
 # Eclipse Orbit
 https://download.eclipse.org/tools/orbit/downloads/drops/I20230403150144/repository
 
+# Eclipse Nebula
+https://download.eclipse.org/nebula/archive/releases/3.1.1
+
 # Eclipse Platform
 https://download.eclipse.org/eclipse/updates/4.35/R-4.35-202502280140
 
