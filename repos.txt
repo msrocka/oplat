@@ -7,10 +7,16 @@ https://download.eclipse.org/tools/orbit/downloads/drops/I20230403150144/reposit
 https://download.eclipse.org/nebula/archive/releases/3.1.1
 
 # Eclipse Platform
-https://download.eclipse.org/eclipse/updates/4.35/R-4.35-202502280140
+# https://download.eclipse.org/eclipse/updates/4.35/R-4.35-202502280140
+https://download.eclipse.org/eclipse/updates/4.36/R-4.36-202505281830
 
 # Eclipse EMF
-https://download.eclipse.org/modeling/emf/emf/builds/release/2.41.0
+# https://download.eclipse.org/modeling/emf/emf/builds/release/2.41.0
+https://download.eclipse.org/modeling/emf/emf/builds/release/2.42.0
 
 # Eclipse GEF
-https://download.eclipse.org/tools/gef/classic/release/3.23.0
+# https://download.eclipse.org/tools/gef/classic/release/3.23.0
+https://download.eclipse.org/tools/gef/classic/release/3.24.0
+
+# SWT Charts
+https://download.eclipse.org/swtchart/releases/1.0.0/repository
