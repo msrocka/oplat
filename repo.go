@@ -1,13 +1,11 @@
 package main
 
 import (
-	"bufio"
 	"bytes"
 	"encoding/xml"
 	"fmt"
 	"io"
 	"net/http"
-	"os"
 	"strings"
 
 	"github.com/ulikunitz/xz"
@@ -29,25 +27,6 @@ type Property struct {
 type Unit struct {
 	ID      string `xml:"id,attr"`
 	Version string `xml:"version,attr"`
-}
-
-func readRepoUrls(filename string) ([]string, error) {
-	file, err := os.Open(filename)
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
-
-	var urls []string
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := strings.TrimSpace(scanner.Text())
-		if line == "" || strings.HasPrefix(line, "#") {
-			continue
-		}
-		urls = append(urls, line)
-	}
-	return urls, scanner.Err()
 }
 
 func fetchAndParseRepo(baseURL string) (*Repo, error) {

@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"path/filepath"
 )
 
 func main() {
@@ -13,11 +12,7 @@ func main() {
 		return
 	}
 
-	urls, err := readRepoUrls("repos.txt")
-	if err != nil {
-		fmt.Println("Could not read repo URLs:", err)
-		return
-	}
+	urls := repoUrls()
 
 	for _, url := range urls {
 		repo, err := fetchAndParseRepo(url)
@@ -33,16 +28,14 @@ func main() {
 }
 
 func readTargetDefinition() *TargetDef {
-	var targetDefFile string
+	targetDefFile := "platform.target"
 	if len(os.Args) > 1 {
 		targetDefFile = os.Args[1]
-	} else {
-		targetDefFile = filepath.Join(os.Getenv("HOME"),
-			"Projects/openLCA/repos/olca-app/olca-app/platform.target")
 	}
 	_, err := os.Stat(targetDefFile)
 	if err != nil {
-		fmt.Println("Could not read:", targetDefFile, err)
+		fmt.Println("Error: could not find", targetDefFile)
+		fmt.Println("Run this tool in a directory that contains a platform.target file, or pass the path as an argument.")
 		os.Exit(1)
 	}
 
