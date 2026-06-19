@@ -10,7 +10,7 @@ var reposFile string
 
 func repoUrls() []string {
 	var urls []string
-	for _, line := range strings.Split(reposFile, "\n") {
+	for line := range strings.SplitSeq(reposFile, "\n") {
 		line = strings.TrimSpace(line)
 		if line == "" || strings.HasPrefix(line, "#") {
 			continue

@@ -1,22 +1,24 @@
-# The repository URLs that should be checked for updated components.
+# The repository URLs that will be checked for updated components
+# if they match the platform.target file. Remember to always pin
+# a specific version, so do not take an URL that ends with `latest`
+# or so but with a specific version number. To look for updates,
+# just visit the upper path of the URL, you should find the current
+# repository this way.
 
-# Eclipse Orbit
-https://download.eclipse.org/tools/orbit/downloads/drops/I20230403150144/repository
+# EMF
+https://download.eclipse.org/modeling/emf/emf/builds/release/2.46.0
 
-# Eclipse Nebula
+# GEF
+https://download.eclipse.org/tools/gef/classic/release/3.28.0
+
+# Nebula
 https://download.eclipse.org/nebula/archive/releases/3.1.1
 
-# Eclipse Platform
-# https://download.eclipse.org/eclipse/updates/4.35/R-4.35-202502280140
-https://download.eclipse.org/eclipse/updates/4.36/R-4.36-202505281830
+# Orbit
+https://download.eclipse.org/tools/orbit/downloads/drops/R20230531010532/repository
 
-# Eclipse EMF
-# https://download.eclipse.org/modeling/emf/emf/builds/release/2.41.0
-https://download.eclipse.org/modeling/emf/emf/builds/release/2.42.0
-
-# Eclipse GEF
-# https://download.eclipse.org/tools/gef/classic/release/3.23.0
-https://download.eclipse.org/tools/gef/classic/release/3.24.0
+# Platform
+https://download.eclipse.org/eclipse/updates/4.40/R-4.40-202606010713
 
 # SWT Charts
-https://download.eclipse.org/swtchart/releases/1.0.0/repository
+https://download.eclipse.org/swtchart/releases/1.1.0/repository
